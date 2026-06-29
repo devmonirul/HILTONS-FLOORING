@@ -325,16 +325,27 @@
 					<div class="quote text-center">
 						<h2>Get a Quote</h2>
 						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-						<form action="/thank-you.html" name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
-							<textarea type="text" name="message" id="" cols="30" rows="10" placeholder="Message" required></textarea>
-							<input type="email" name="email" placeholder="Email" required>
-							<input type="text" name="name" placeholder="Full Name" required>
+						<form
+							name="contact"
+							method="POST"
+							action="/thank-you.html"
+							data-netlify="true"
+							netlify-honeypot="bot-field">
 
-							<p class="hidden">
-							<label>
-								Don’t fill this out if you’re human: <input name="bot-field" type="text" />
+							<input type="hidden" name="form-name" value="contact">
+
+							<p hidden>
+								<label>
+									Don't fill this out:
+									<input name="bot-field">
 								</label>
 							</p>
+
+							<textarea name="message" required></textarea>
+
+							<input type="email" name="email" required>
+
+							<input type="text" name="name" required>
 
 							<input type="submit" value="Send">
 						</form>
