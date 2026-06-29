@@ -325,11 +325,37 @@
 					<div class="quote text-center">
 						<h2>Get a Quote</h2>
 						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-						<form name="contact" netlify>
-							<textarea type="text" name="message" id="" cols="30" rows="10" placeholder="Message" required></textarea>
-							<input type="email" name="email" placeholder="Email" required>
-							<input type="name" name="name" placeholder="Full Name" required>
+						<form
+							name="contact"
+							method="POST"
+							data-netlify="true"
+							action="/thank-you.html"
+						>
+
+							<input type="hidden" name="form-name" value="contact">
+
+							<textarea
+								name="message"
+								placeholder="Message"
+								required
+							></textarea>
+
+							<input
+								type="email"
+								name="email"
+								placeholder="Email"
+								required
+							>
+
+							<input
+								type="text"
+								name="name"
+								placeholder="Full Name"
+								required
+							>
+
 							<input type="submit" value="Send">
+
 						</form>
 					</div>
 				</div>
